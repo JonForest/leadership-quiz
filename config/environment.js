@@ -24,6 +24,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    firebase: {
+      apiKey: process.env.FIREBASE_APIKEY,
+      authDomain: process.env.FIREBASE_AUTHDOMAIN,
+      databaseURL: process.env.FIRBASE_DATABASEURL,
+      projectId: process.env.FIRBASE_PROJECTID,
+      storageBucket: process.env.FIRBASE_STORAGEBUCKET,
+      messagingSenderId: process.env.FIRBASE_MESSAGINGSENDERID 
     }
   };
 
