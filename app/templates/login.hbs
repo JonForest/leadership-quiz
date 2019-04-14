@@ -1,6 +1,6 @@
 <div class="flex flex-col content-center justify-center h-screen">
-  {{#each model as |team|}}
-    {{#link-to 'main' team.id class="no-underline"}}
+  {{#each this.model as |team|}}
+    {{#link-to "main" team.id class="no-underline"}}
       <TeamLogin @name={{team.name}} />
     {{/link-to}}
   {{/each}}
