@@ -7,8 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('login', {path: '/'});
-  this.route('main', {path: "/:team_id"});
+  this.route('behaviour', function() {
+    this.route('new');
+  });
+  this.route('login');
+  this.route('main', {path: '/:team_id'});
 });
 
 export default Router;

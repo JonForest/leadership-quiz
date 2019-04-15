@@ -29,10 +29,10 @@ module.exports = function(environment) {
     firebase: {
       apiKey: process.env.FIREBASE_APIKEY,
       authDomain: process.env.FIREBASE_AUTHDOMAIN,
-      databaseURL: process.env.FIRBASE_DATABASEURL,
-      projectId: process.env.FIRBASE_PROJECTID,
-      storageBucket: process.env.FIRBASE_STORAGEBUCKET,
-      messagingSenderId: process.env.FIRBASE_MESSAGINGSENDERID 
+      databaseURL: process.env.FIREBASE_DATABASEURL,
+      projectId: process.env.FIREBASE_PROJECTID,
+      storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+      messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID
     }
   };
 

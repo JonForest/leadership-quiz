@@ -4,6 +4,9 @@
 /dist/
 /tmp/
 
+# protected
+.env
+
 # dependencies
 /bower_components/
 /node_modules/
