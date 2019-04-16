@@ -1,6 +1,25 @@
 <div class="flex bg-grey-lighter h-screen">
-  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2" @title="Behaviours" @behaviours={{@behaviours}}/>
-  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2" @title="Self" @behaviours={{@self}}/>
-  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2" @title="Others" @behaviours={{@others}}/>
-  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2" @title="Expertise" @behaviours={{@expertise}}/>
+  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2"
+                 @title="Behaviours"
+                 @behaviours={{this.unallocated}}
+                 @moveBehaviour={{action this.moveBehaviour 'unallocated'}}
+  />
+  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2"
+                 @title="Self"
+                 @behaviours={{this.self}}
+                 @moveBehaviour={{action this.moveBehaviour 'self'
+  }}
+  />
+
+  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2"
+                 @title="Others"
+                 @behaviours={{this.others}}
+                 @moveBehaviour={{action this.moveBehaviour 'others'}}
+  />
+
+  <BehaviourList class="flex-1 text-grey-darker text-center bg-grey px-4 py-2 m-2"
+                 @title="Expertise"
+                 @behaviours={{this.expertise}}
+                 @moveBehaviour={{action this.moveBehaviour 'expertise'}}
+  />
 </div>

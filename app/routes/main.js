@@ -14,7 +14,7 @@ export default class TeamRoute extends Route {
       {description: "Behaviour 8", id: 8},
       {description: "Behaviour 9", id: 9},
       {description: "Behaviour 10", id: 10}
-    ]
+    ].map(behaviour => this.store.createRecord('behaviour', behaviour))
 
   }
 }

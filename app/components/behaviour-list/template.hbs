@@ -1,8 +1,8 @@
 <div ...attributes>
   <h3>{{@title}}  </h3>
-  {{#sortable-objects sortableObjectList=this.behaviours sortingScope="behaviours"}}
+  {{#draggable-object-target tagName="div" action=this.dropBehaviour}}
     {{#each this.behaviours as |behaviour|}}
-      {{#draggable-object content=behaviour  overrideClass="sortObject" isSortable=true sortingScope="behaviours"}}
+      {{#draggable-object content=behaviour}}
 
         {{!--Gross little fix for dodgy ember-drag-drop behaviour https://github.com/mharris717/ember-drag-drop/issues/67--}}
         {{#if behaviour.hidden}}
@@ -12,5 +12,5 @@
         {{/if}}
       {{/draggable-object}}
     {{/each}}
-  {{/sortable-objects}}
+  {{/draggable-object-target}}
 </div>
