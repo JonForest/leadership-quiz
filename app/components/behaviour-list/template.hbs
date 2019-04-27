@@ -1,16 +1,13 @@
 <div ...attributes>
   <h3>{{@title}}  </h3>
   {{#draggable-object-target tagName="div" action=this.dropBehaviour}}
-    {{#each this.behaviours as |behaviour|}}
+    {{#each @behaviours as |behaviour|}}
       {{#draggable-object content=behaviour}}
-
-        {{!--Gross little fix for dodgy ember-drag-drop behaviour https://github.com/mharris717/ember-drag-drop/issues/67--}}
-        {{#if behaviour.hidden}}
-          <div class="w-full h-8 border border-grey-black h-25"></div>
-        {{else}}
-          <BehaviourList::BehaviourItem @description={{behaviour.description}} />
-        {{/if}}
+        <BehaviourList::BehaviourItem @description={{behaviour.description}} />
       {{/draggable-object}}
     {{/each}}
+
+    {{!--Gross little fix for dodgy ember-drag-drop behaviour https://github.com/mharris717/ember-drag-drop/issues/67--}}
+    <div class="w-full h-12 border border-grey-black h-25"></div>
   {{/draggable-object-target}}
 </div>

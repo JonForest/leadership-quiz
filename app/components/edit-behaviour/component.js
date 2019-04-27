@@ -1,14 +1,25 @@
 import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service'
 
-// import { inject as service } from '@ember/service'
+export default class EditBehaviour extends Component {
+  @service router
 
-export default class HelloButton extends Component {
-  // @service store;
+  constructor(owner, args) {
+    super(...arguments)
+    this.description = args.behaviour.description
+    this.list = args.behaviour.list
+    this.team = args.behaviour.team
+  }
 
   @action
   saveBehaviour() {
-    debugger
-    this.args.behaviour.set('description', 'test')
+    this.args.behaviour.setProperties({
+      description: this.description,
+      list: this.list,
+      team: Number(this.team)
+    })
     this.args.behaviour.save()
+    this.router.transitionTo('admin')
   }
 }

@@ -28,3 +28,4 @@
 
 # editor
 /.idea
+.DS_Store
