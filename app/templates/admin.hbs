@@ -6,7 +6,7 @@
 
 <h2>Behaviours</h2>
 {{#each this.model as |behaviour|}}
-  <AdminBehaviourItem @behaviour={{behaviour}} />
+  <AdminBehaviourItem @behaviour={{behaviour}} @deleteBehaviour={{action this.deleteBehaviour behaviour}}/>
 {{/each}}
 <div class="my-4 p-4">
   <button class="border p-2 rounded border-grey bg-grey-light shadow-lg hover:shadow hover:bg-grey" {{action this.randomGroupAssign}}>Randomise groups</button>

@@ -23,4 +23,9 @@ export default class AdminController extends Controller {
       behaviour.save()
     })
   }
+
+  @action
+  deleteBehaviour(behaviour) {
+    behaviour.destroyRecord()
+  }
 }
