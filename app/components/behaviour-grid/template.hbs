@@ -1,7 +1,9 @@
 <div class="flex min-h-screen">
-  <BehaviourList @title="Behaviours"
-                 @behaviours={{this.unallocated}}
-                 @moveBehaviour={{action this.moveBehaviour "unallocated"}} />
+  {{#unless @hideUnallocated}}
+    <BehaviourList @title="Behaviours"
+                   @behaviours={{this.unallocated}}
+                   @moveBehaviour={{action this.moveBehaviour "unallocated"}} />
+  {{/unless}}
   <BehaviourList @title="Self"
                  @behaviours={{this.self}}
                  @moveBehaviour={{action this.moveBehaviour "self"}} />

@@ -10,15 +10,14 @@
 
   <div class="my-4">
     {{#let (array
-            (hash value='unallocated' name='Unallocated')
-            (hash value='self' name='Self')
-            (hash value='others' name='Others')
-            (hash value='expertise' name='Expertise')
+            (hash value="unallocated" name="Unallocated")
+            (hash value="self" name="Self")
+            (hash value="others" name="Others")
+            (hash value="expertise" name="Expertise")
           ) as |listOptions|}}
 
       <label for="list" class="block text-grey-darker text-sm font-bold mb-2">List</label>
       <select id="list" label="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
-              id="grid-state"
               onchange={{action (mut this.list) value="target.value"}}>
         {{#each listOptions as |listOption|}}
           <option value={{listOption.value}} selected={{eq listOption.value this.list}}>
@@ -35,6 +34,6 @@
       class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
       @value={{this.team}} />
   </div>
-  {{#link-to 'admin'}}Cancel{{/link-to}}
+  {{#link-to "admin"}}Cancel{{/link-to}}
   <button class="border p-2 rounded border-grey bg-grey-light shadow-lg hover:shadow hover:bg-grey" onclick={{this.saveBehaviour}}>Save</button>
 </div>

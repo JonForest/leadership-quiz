@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('behaviour', function() {
     this.route('new');
     this.route('edit', {path: '/:behaviour_id'});
+    this.route('all');
   });
   this.route('login');
   this.route('main', {path: '/:team_id'});

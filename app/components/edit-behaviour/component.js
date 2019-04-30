@@ -13,13 +13,13 @@ export default class EditBehaviour extends Component {
   }
 
   @action
-  saveBehaviour() {
+  async saveBehaviour() {
     this.args.behaviour.setProperties({
       description: this.description,
       list: this.list,
       team: Number(this.team)
     })
-    this.args.behaviour.save()
+    await this.args.behaviour.save()
     this.router.transitionTo('admin')
   }
 }
