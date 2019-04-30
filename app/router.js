@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('new');
     this.route('edit', {path: '/:behaviour_id'});
     this.route('all');
+    this.route('import');
   });
   this.route('login');
   this.route('main', {path: '/:team_id'});

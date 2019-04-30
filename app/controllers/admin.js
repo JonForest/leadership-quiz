@@ -6,7 +6,7 @@ export default class AdminController extends Controller {
   getTeam() {
     const selectedTeam = Math.floor(Math.random() * 4) + 1
     if (this.teamCount[selectedTeam - 1] > 0) {
-      this.teamCount[selectedTeam - 1] = this.teamCount[selectedTeam - 1] - 1
+      this.teamCount[selectedTeam - 1] -= 1
       return selectedTeam
     } else {
       return this.getTeam()

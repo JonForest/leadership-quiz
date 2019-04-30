@@ -27,10 +27,10 @@ export default class BehaviourGrid extends Component {
   }
 
   @action
-  moveBehaviour(toList, id) {
+  async moveBehaviour(toList, id) {
     const behaviour = this.args.behaviours.find(behaviour => behaviour.id === id)
     behaviour.set('list', toList)
-    behaviour.save()
+    await behaviour.save()
 
     // Fire the setter
     this.behaviours = this.behaviours
